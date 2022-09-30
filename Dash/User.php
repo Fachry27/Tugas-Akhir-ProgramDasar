@@ -157,7 +157,7 @@
 						</a>
                         <ul aria-expanded="false">
                             <li><a href="formUsers.php">User Form</a></li>
-                            <li><a href="#">Form3</a></li>
+                            <li><a href="formMateri.php">Materi Form</a></li>
                             <li><a href="#">Form2</a></li>
                             <li><a href="#">Form5</a></li>
                             <li><a href="#">Form4</a></li>
@@ -169,7 +169,7 @@
 						</a>
                         <ul aria-expanded="false">
                             <li><a href="User.php">User</a></li>
-                            <li><a href="#">Table1</a></li>
+                            <li><a href="Materi.php">Materi</a></li>
                         </ul>
                     </li>
 
@@ -263,8 +263,8 @@
 															<svg width='20px' height='20px' viewbox='0 0 24 24' version='1.1'><g stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'><rect x='0' y='0' width='24' height='24'></rect><circle fill='#000000' cx='5' cy='12' r='2'></circle><circle fill='#000000' cx='12' cy='12' r='2'></circle><circle fill='#000000' cx='19' cy='12' r='2'></circle></g></svg>
 														</button>
 														<div class='dropdown-menu'>
-															<a class='dropdown-item' href='#'>Edit</a>
-															<a class='dropdown-item' href='#'>Delete</a>
+															<a class='dropdown-item' href='editUser.php?id=$data[id_user]'>Edit</a>
+															<a class='dropdown-item' href='hapusUser.php?id=$data[id_user]'>Delete</a>
 														</div>
 													</div>
 												</td>

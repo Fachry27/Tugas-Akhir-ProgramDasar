@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="stylelogin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@200;300;400&family=Roboto+Serif:opsz@8..144&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="box">
+        <h1>LOGIN</h1>
+        <form action="">
+            <!-- Username -->
+            <div class="textfield">
+                <input type="text" required id="username">
+                <span></span>
+                <label for="">Username</label>
+            </div>
+            <!-- password -->
+            <div class="textfield">
+                <input type="password" required id="password">
+                <span></span>
+                <label for="">Password</label>
+            </div>
+            <!-- failsafe -->
+            <div class="failsafe"><a>Forgot Your Password?</a></div>
+            <!-- go -->
+            <button type="button" onclick="getinfo()">Login</button>
+            <!-- signup -->
+            <div class="signup">
+                Not a member? <a>Sign Up</a>
+            </div>
+        </form>
+        <script src="log.js"></script>
+    </div>
+    
+</body>
+</html>

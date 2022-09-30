@@ -1,3 +1,16 @@
+<?php
+    include 'connection.php';
+
+    $id = $_GET['id'];
+
+    $sql = "SELECT * FROM materi WHERE id = '$id'";
+    $query = mysqli_query($connect, $sql);
+
+    $data = mysqli_fetch_array($query);
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -129,7 +142,7 @@
         <!--**********************************
             Sidebar start
         ***********************************-->
-		<div class="dlabnav">
+        <div class="dlabnav">
             <div class="dlabnav-scroll">
 				<ul class="metismenu" id="menu">
                     <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
@@ -211,7 +224,7 @@
 				<div class="row page-titles">
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item active"><a href="javascript:void(0)">Form</a></li>
-						<li class="breadcrumb-item"><a href="javascript:void(0)">Bootstrap</a></li>
+						<li class="breadcrumb-item"><a href="javascript:void(0)">Materi</a></li>
 					</ol>
                 </div>
                 
@@ -223,30 +236,38 @@
 							</div>
 							<div class="card-body">
 								<div class="basic-form">
-									<form action="addUser.php" method="POST" enctype="multipart/form-data">
-										<div>
-											<h5>Name</h5>
-											<input type="text" class="form-control input-default " placeholder="Name" name="nama">
+									<form action="updateMateri.php" method="POST" enctype="multipart/form-data">
+                                        <div>
+                                            <h5>Id</h5>
+                                            <input type="text" class="form-control input-default" placeholder="Title" name="id" value="<?php echo $data['id']?>" readonly>
+                                        </div>
+										<div class="ownForm">
+											<h5>Title</h5>
+											<input type="text" class="form-control input-default" placeholder="Title" name="title" value="<?php echo $data['Title']?>">
 										</div>
 										<div class="ownForm">
-											<h5>Birth</h5>
-											<input type="date" class="form-control input-default " name="birth">
+											<h5>Short</h5>
+											<input type="text" class="form-control input-default" placeholder="Short" name="short" value="<?php echo $data['Desk']?>">
 										</div>
 										<div class="ownForm">
-											<h5>Password</h5>
-											<input type="text" class="form-control input-default " placeholder="Password" name="password">
+											<h5>Category</h5>
+											<input type="text" class="form-control input-default" placeholder="Category" name="kategori" value="<?php echo $data['kategori']?>">
 										</div>
 										<div class="ownForm">
-											<h5>Phone</h5>
-											<input type="text" class="form-control input-default " placeholder="Phone Number" name="phone">
-										</div>
-										<div class="ownForm">
-											<h5>Email</h5>
-											<input type="text" class="form-control input-default " placeholder="Email" name="email">
+											<h5>Author</h5>
+											<input type="text" class="form-control input-default" placeholder="Author" name="author" value="<?php echo $data['author']?>">
 										</div>
                                         <div class="ownForm">
-											<h5>Profile</h5>
-                                            <input type="file" name="img_usr" class="form-file-input form-control">
+											<h5>Date</h5>
+											<input type="date" class="form-control input-default" name="date" value="<?php echo $data['date']?>">
+										</div>
+										<div class="ownForm">
+											<h5>Isi</h5>
+											<textarea class="form-control" rows="4" id="comment" name="isi"><?php echo $data['Isi']?></textarea>
+										</div>
+                                        <div class="ownForm">
+											<h5>Key img</h5>
+                                            <input type="file" name="img" class="form-file-input form-control">
 										</div>
 										<div class="col-12" style="margin-left: 75%; margin-top: 30px;">
 											<input type="submit" class="btn btn-primary mb-2" style="padding: 5px 40px; font-size: 14pt;" name="submit">
@@ -303,6 +324,7 @@
     <script src="js/custom.min.js"></script>
 	<script src="js/dlabnav-init.js"></script>
 	<script src="js/demo.js"></script>
+    <script src="js/styleSwitcher.js"></script>
 	
 	<!-- Apex Chart -->
 	<script src="vendor/apexchart/apexchart.js"></script>
@@ -315,11 +337,11 @@
 	<script src="js/dashboard/dashboard-1.js"></script>
 	
 	<script src="vendor/owl-carousel/owl.carousel.js"></script>
-    <script src="js/styleSwitcher.js"></script>
 	
     <script src="js/custom.min.js"></script>
 	<script src="js/dlabnav-init.js"></script>
 	<script src="js/demo.js"></script>
+    <script src="js/styleSwitcher.js"></script>
 	<script>
 		function cardsCenter()
 		{

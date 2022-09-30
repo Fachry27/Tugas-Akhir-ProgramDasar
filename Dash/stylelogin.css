@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'M PLUS 1', sans-serif;
+    background: linear-gradient(120deg, #ececec, #dadada);
+    overflow: hidden;
+    height: 100%;
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: linear-gradient(90deg, #414141, #231f20);
+    border-radius: 10px;
+}
+
+.box h1 {
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #F2F2F2;
+    color: #ffffff;
+}
+
+.box form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.textfield {
+    position: relative;
+    border-bottom: 2px solid linear-gradient(90deg, #414141, #231f20);
+    margin: 30px 0;
+}
+
+.textfield label {
+    position: absolute;
+    color: #F2F2F2;
+    top: 50%;
+    left: 5px;
+    opacity: 0.7;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+    font-style: italic;
+}
+
+.textfield span::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #ffffff;
+    transition: 0.8s;
+}
+
+input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    color: #ffffff;
+}
+
+.textfield input:focus ~ label,
+.textfield input:valid ~ label {
+    top: -5px;
+    color: #f55421;
+    font-style: italic;
+}
+
+.textfield input:focus ~ span::before,
+.textfield input:valid ~ span::before {
+    width: 100%;
+}
+
+.failsafe {
+    margin: -5px 0 20px 5px;
+    color: #f55421;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.5s;
+    font-style: italic;
+}
+
+.failsafe:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+button {
+    width: 100%;
+    height: 50px;
+    border: 0.5px solid #f55421;
+    background-color: #f55421;
+    opacity: 0.5;
+    border-radius: 20px;
+    font-size: 18px;
+    color: #ffffff;
+    font-weight: 300;
+    transition: 0.8s;
+}
+
+button:hover {
+    opacity: 1;
+    transition: 0.8s;
+}
+
+.signup {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #F2F2F2;
+    opacity: 0.8;
+}
+
+.signup a {
+    font-style: italic;
+    color: #5CB8E4;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+.signup a:hover {
+    opacity: 1;
+    font-weight: bold;
+    transition: 0.5s;
+    text-decoration: underline;
+}
+
+

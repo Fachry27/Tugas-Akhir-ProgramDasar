@@ -1,3 +1,15 @@
+<?php
+    include 'koneksi.php';
+
+    $id = $_GET['id'];
+
+    $sql = "SELECT * FROM user WHERE id_user = '$id'";
+    $query = mysqli_query($connect, $sql);
+
+    $data = mysqli_fetch_array($query);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
