@@ -17,25 +17,26 @@
         <form action="">
             <!-- Username -->
             <div class="textfield">
-                <input type="text" required>
+                <input type="text" required id="username">
                 <span></span>
                 <label for="">Username</label>
             </div>
             <!-- password -->
             <div class="textfield">
-                <input type="password" required>
+                <input type="password" required id="password">
                 <span></span>
                 <label for="">Password</label>
             </div>
             <!-- failsafe -->
             <div class="failsafe"><a>Forgot Your Password?</a></div>
             <!-- go -->
-            <button onclick="">Login</button>
+            <button type="button" onclick="getinfo()">Login</button>
             <!-- signup -->
             <div class="signup">
                 Not a member? <a>Sign Up</a>
             </div>
         </form>
+        <script src="log.js"></script>
     </div>
     
 </body>
